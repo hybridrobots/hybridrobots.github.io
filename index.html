@@ -31,231 +31,226 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Michroma&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="site.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand-mark" href="#top" aria-label="Hybrid Autonomous Bot Systems home">
-        <img src="logo.png" alt="" width="40" height="40" />
-        <span class="brand-name">Hybrid Autonomous Bot Systems</span>
+        <img src="logo.svg" alt="" width="34" height="34" />
+        <span class="brand-name">
+          <span class="brand-name-full">Hybrid Autonomous Bot Systems</span>
+          <span class="brand-name-short" aria-hidden="true">HABS</span>
+        </span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
+      <button type="button" class="nav-toggle" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
         <a href="#problem">Problem</a>
-        <a href="#build">What we build</a>
+        <a href="#build">Capabilities</a>
         <a href="#difference">Difference</a>
-        <a href="#process">How we work</a>
-        <a class="nav-cta" href="#contact">Talk to us</a>
+        <a href="#process">Approach</a>
+        <a class="nav-cta" href="#contact">Book a call</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-headline">
-      <div id="particles-js" aria-hidden="true"></div>
-      <div class="hero-atmosphere" aria-hidden="true"></div>
-      <div class="shell hero-inner">
-        <img class="hero-logo" src="logo.png" alt="Hybrid Autonomous Bot Systems logo" width="168" height="168" />
-        <h1 class="hero-headline" id="hero-headline">AI agents that do the work. You stay in control.</h1>
-        <p class="hero-support">
-          Build practical AI agents that handle repetitive business tasks, work with your existing systems, and operate within rules you define.
-        </p>
-        <p class="hero-pillars">
-          Private by design. Human oversight where it matters. Built around measurable business value.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#build">See what we build</a>
-          <a class="btn btn-ghost" href="#contact">Book a call</a>
+    <section class="hero" id="top" aria-labelledby="hero-brand">
+      <div class="hero-mesh" aria-hidden="true">
+        <span class="hero-mesh-blob hero-mesh-blob-a"></span>
+        <span class="hero-mesh-blob hero-mesh-blob-b"></span>
+        <span class="hero-mesh-blob hero-mesh-blob-c"></span>
+      </div>
+      <div class="hero-visual">
+        <img
+          src="hero.jpeg"
+          alt="Portrait of a hybrid autonomous agent — human features with a luminous neural lattice."
+          width="640"
+          height="640"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="hero-brand" id="hero-brand">Hybrid Autonomous<br />Bot Systems</p>
+          <h1 class="hero-headline" id="hero-headline">AI agents that do the work. You stay in control.</h1>
+          <p class="hero-support">
+            Practical agents for repetitive business tasks — private by design, with human oversight where it matters.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book a call</a>
+            <a class="btn btn-ghost" href="#build">View capabilities</a>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#problem" aria-label="Scroll to more content">
+        <span class="scroll-cue-mouse" aria-hidden="true">
+          <span class="scroll-cue-wheel"></span>
+        </span>
+      </a>
+    </section>
+
+    <section class="band band-problem" id="problem" aria-labelledby="problem-title">
+      <div class="shell reveal">
+        <p class="eyebrow">The problem</p>
+        <h2 id="problem-title">Your people shouldn’t spend their day moving information around.</h2>
+        <div class="problem-split">
+          <ul class="friction-list" aria-label="Repetitive work">
+            <li>Emails to classify</li>
+            <li>Documents to search</li>
+            <li>Reports to prepare</li>
+            <li>Systems to update</li>
+            <li>Customers to follow up</li>
+          </ul>
+          <p class="band-lead">
+            We build agents to take on defined parts of that work, while keeping people responsible for decisions that matter.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="band" id="problem" aria-labelledby="problem-title">
-      <div class="shell band-block">
+    <section class="band" id="build" aria-labelledby="build-title">
+      <div class="shell reveal">
         <header class="band-head">
-          <p class="eyebrow">The problem</p>
-          <h2 id="problem-title">Your people shouldn’t spend their day moving information around.</h2>
-          <p class="band-lead">
-            Emails to classify. Documents to search. Reports to prepare. Systems to update. Customers to follow up with.
-          </p>
-          <p class="band-lead">
-            We build agents to take on defined parts of that work, while keeping people responsible for decisions that matter.
-          </p>
-        </header>
-      </div>
-    </section>
-
-    <section class="band band-alt" id="build" aria-labelledby="build-title">
-      <div class="shell band-block">
-        <header class="band-head">
-          <p class="eyebrow">What we build</p>
+          <p class="eyebrow">Capabilities</p>
           <h2 id="build-title">Purpose-built agents for real business work.</h2>
+          <p class="band-lead">Three agent families. One engagement model: scoped, measurable, owned by you.</p>
         </header>
-        <ul class="signal-list" aria-label="Agent types">
+        <ol class="cap-list" aria-label="Agent types">
           <li>
-            <span class="signal-key">01</span>
+            <span class="idx">01</span>
             <div>
               <strong>Knowledge agents</strong>
               <p>Find answers across company documents, explain their sources, and help employees act on internal knowledge.</p>
             </div>
           </li>
           <li>
-            <span class="signal-key">02</span>
+            <span class="idx">02</span>
             <div>
               <strong>Operations agents</strong>
               <p>Process requests, prepare reports, coordinate workflows, and update connected systems with appropriate permissions.</p>
             </div>
           </li>
           <li>
-            <span class="signal-key">03</span>
+            <span class="idx">03</span>
             <div>
-              <strong>Research and business agents</strong>
+              <strong>Research &amp; business agents</strong>
               <p>Gather information, qualify leads, prepare communications, and assist with routine business administration.</p>
             </div>
           </li>
-        </ul>
-        <p class="example-callout">
-          <span class="mono-label">Example</span>
+        </ol>
+        <p class="example-line">
+          <span class="eyebrow">Example</span>
           A support agent that answers from your internal docs, hosted on your own server.
         </p>
       </div>
     </section>
 
-    <section class="band" id="difference" aria-labelledby="difference-title">
-      <div class="shell band-block">
+    <section class="band band-muted" id="difference" aria-labelledby="difference-title">
+      <div class="shell reveal">
         <header class="band-head">
-          <p class="eyebrow">Our difference</p>
-          <h2 id="difference-title">Your AI. Your data. Your rules.</h2>
+          <p class="eyebrow">Difference</p>
+          <h2 id="difference-title" class="phrase-stack">
+            <span>Your AI.</span>
+            <span>Your data.</span>
+            <span>Your rules.</span>
+          </h2>
         </header>
-        <ul class="signal-list" aria-label="Our difference">
+        <ul class="diff-list" aria-label="Our difference">
           <li>
-            <span class="signal-key">01</span>
-            <div>
-              <strong>Deployment freedom</strong>
-              <p>Local, private cloud, or hybrid.</p>
-            </div>
+            <strong>Deployment freedom</strong>
+            <p>Local, private cloud, or hybrid.</p>
           </li>
           <li>
-            <span class="signal-key">02</span>
-            <div>
-              <strong>Model freedom</strong>
-              <p>Choose the model that fits the task, cost, and privacy requirements.</p>
-            </div>
+            <strong>Model freedom</strong>
+            <p>Choose the model that fits the task, cost, and privacy requirements.</p>
           </li>
           <li>
-            <span class="signal-key">03</span>
-            <div>
-              <strong>Controlled autonomy</strong>
-              <p>Define what an agent may do independently and what requires approval.</p>
-            </div>
+            <strong>Controlled autonomy</strong>
+            <p>Define what an agent may do independently and what requires approval.</p>
           </li>
           <li>
-            <span class="signal-key">04</span>
-            <div>
-              <strong>Visibility</strong>
-              <p>Logging, testing, monitoring, and traceability appropriate to the system.</p>
-            </div>
+            <strong>Visibility</strong>
+            <p>Logging, testing, monitoring, and traceability appropriate to the system.</p>
           </li>
           <li>
-            <span class="signal-key">05</span>
-            <div>
-              <strong>Ownership</strong>
-              <p>Documented systems and a practical handover, with ongoing support if needed.</p>
-            </div>
+            <strong>Ownership</strong>
+            <p>Documented systems and a practical handover, with ongoing support if needed.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="band band-alt" id="process" aria-labelledby="process-title">
-      <div class="shell band-block">
+    <section class="band" id="process" aria-labelledby="process-title">
+      <div class="shell reveal">
         <header class="band-head">
-          <p class="eyebrow">How we work</p>
+          <p class="eyebrow">Approach</p>
           <h2 id="process-title">Start small. Prove the value. Scale with confidence.</h2>
         </header>
-        <ul class="signal-list" aria-label="How we work">
+        <ol class="steps" aria-label="How we work">
           <li>
-            <span class="signal-key">01</span>
-            <div>
-              <strong>Discover</strong>
-              <p>Identify one time-consuming, measurable workflow.</p>
-            </div>
+            <span class="idx">01</span>
+            <strong>Discover</strong>
+            <p>Identify one time-consuming, measurable workflow.</p>
           </li>
           <li>
-            <span class="signal-key">02</span>
-            <div>
-              <strong>Build</strong>
-              <p>Develop a focused agent and connect the necessary data and tools.</p>
-            </div>
+            <span class="idx">02</span>
+            <strong>Build</strong>
+            <p>Develop a focused agent and connect the necessary data and tools.</p>
           </li>
           <li>
-            <span class="signal-key">03</span>
-            <div>
-              <strong>Validate</strong>
-              <p>Test accuracy, boundaries, failure cases, and time saved.</p>
-            </div>
+            <span class="idx">03</span>
+            <strong>Validate</strong>
+            <p>Test accuracy, boundaries, failure cases, and time saved.</p>
           </li>
           <li>
-            <span class="signal-key">04</span>
-            <div>
-              <strong>Deploy</strong>
-              <p>Introduce it with monitoring, appropriate human approval, and a clear maintenance plan.</p>
-            </div>
+            <span class="idx">04</span>
+            <strong>Deploy</strong>
+            <p>Introduce it with monitoring, human approval where needed, and a clear maintenance plan.</p>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
     <section class="band band-cta" id="contact" aria-labelledby="contact-title">
-      <div class="shell band-block">
-        <header class="band-head">
-          <p class="eyebrow">Next step</p>
-          <h2 id="contact-title">Ready to put an agent to work?</h2>
-          <p class="band-lead">
-            Tell us about one workflow that costs your team time every week.
-            Book a short call — we’ll map a focused first agent.
-          </p>
-        </header>
-        <div class="band-actions">
-          <a class="btn btn-primary" href="#book">Book a call</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/company/habs-by-antonis" target="_blank" rel="noopener noreferrer">Chat on LinkedIn</a>
+      <div class="shell reveal">
+        <div class="cta-layout">
+          <header class="band-head">
+            <p class="eyebrow">Next step</p>
+            <h2 id="contact-title">Ready to put an agent to work?</h2>
+            <p class="band-lead">
+              Tell us about one workflow that costs your team time every week.
+              Book a short call — we’ll map a focused first agent.
+            </p>
+            <div class="band-actions">
+              <a class="btn btn-ghost" href="https://www.linkedin.com/company/habs-by-antonis" target="_blank" rel="noopener noreferrer">Chat on LinkedIn</a>
+            </div>
+          </header>
+          <form class="book-form" id="book" novalidate>
+            <p class="form-kicker">30-minute discovery call</p>
+            <p class="book-note">Pick a time in Europe/Athens. This sends a request by email — we’ll confirm the slot.</p>
+            <p class="book-field-label" id="bookDaysLabel">Choose a day</p>
+            <div class="book-chips" id="bookDays" role="group" aria-labelledby="bookDaysLabel"></div>
+            <p class="book-field-label" id="bookSlotsLabel" hidden>Available times</p>
+            <div class="book-chips book-chips-times" id="bookSlots" role="group" aria-labelledby="bookSlotsLabel" hidden></div>
+            <div class="book-fields">
+              <label class="book-field"><span>Name</span><input type="text" name="bookName" autocomplete="name" required maxlength="120" /></label>
+              <label class="book-field"><span>Email</span><input type="email" name="bookEmail" autocomplete="email" required maxlength="160" /></label>
+              <label class="book-field book-field-full"><span>What should we talk about? <em>(optional)</em></span><textarea name="bookNotes" rows="3" maxlength="800"></textarea></label>
+            </div>
+            <div class="band-actions">
+              <button type="submit" class="btn btn-primary">Request this slot</button>
+            </div>
+            <p class="book-status" id="bookStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
-
-        <form class="book-form" id="book" novalidate>
-          <p class="mono-label">30-minute discovery call</p>
-          <p class="book-note">
-            Pick a time in Europe/Athens. This sends a request by email — we’ll confirm the slot.
-          </p>
-
-          <p class="book-field-label" id="bookDaysLabel">Choose a day</p>
-          <div class="book-chips" id="bookDays" role="group" aria-labelledby="bookDaysLabel"></div>
-
-          <p class="book-field-label" id="bookSlotsLabel" hidden>Available times</p>
-          <div class="book-chips book-chips-times" id="bookSlots" role="group" aria-labelledby="bookSlotsLabel" hidden></div>
-
-          <div class="book-fields">
-            <label class="book-field">
-              <span>Name</span>
-              <input type="text" name="bookName" autocomplete="name" required maxlength="120" />
-            </label>
-            <label class="book-field">
-              <span>Email</span>
-              <input type="email" name="bookEmail" autocomplete="email" required maxlength="160" />
-            </label>
-            <label class="book-field book-field-full">
-              <span>What should we talk about? <em>(optional)</em></span>
-              <textarea name="bookNotes" rows="3" maxlength="800"></textarea>
-            </label>
-          </div>
-
-          <div class="band-actions">
-            <button type="submit" class="btn btn-primary">Request this slot</button>
-          </div>
-          <p class="book-status" id="bookStatus" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -263,19 +258,26 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <div class="footer-brand">
-        <img src="logo.png" alt="" width="28" height="28" />
+        <img src="logo.svg" alt="" width="28" height="28" />
         <div>
           <strong>Hybrid Autonomous Bot Systems</strong>
+          <p class="footer-tag">AI agents you own and control.</p>
         </div>
       </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#problem">Problem</a>
+        <a href="#build">Capabilities</a>
+        <a href="#difference">Difference</a>
+        <a href="#process">Approach</a>
+        <a href="#contact">Book a call</a>
+      </nav>
       <div class="footer-meta">
         <p>© <span id="y"></span> Hybrid Autonomous Bot Systems.</p>
-        <span class="footer-right">
-          <span class="footer-links"><a href="#cookies">Cookies</a> · <a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></span>
-          <span class="footer-social"><span>Social:</span>
-            <a class="footer-linkedin" href="https://www.linkedin.com/company/habs-by-antonis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="footer-linkedin-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg><span>LinkedIn</span></a>
-          </span>
-        </span>
+        <span class="footer-links"><a href="#cookies">Cookies</a> · <a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></span>
+        <a class="footer-linkedin" href="https://www.linkedin.com/company/habs-by-antonis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="footer-linkedin-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
+          <span>LinkedIn</span>
+        </a>
       </div>
     </div>
   </footer>
@@ -286,17 +288,17 @@
         <article id="cookies">
       <h2 id="legalPopTitle" data-i18n="cookies.title">Cookies</h2>
       <div class="cookies-body" data-i18n="cookies.body" data-i18n-html="1">
-<p>The website uses cookies and similar technologies where necessary for its operation.</p><p>These may include cookies or locally stored information used for purposes such as:</p><ul><li>maintaining a website session</li><li>remembering language or interface preferences</li><li>remembering cookie/privacy preferences</li><li>providing required security functionality</li></ul><p>We do not use advertising cookies for third-party behavioural advertising.</p><p>The call-booking form on this website runs in your browser. Submitting a request opens your email application with a pre-filled message and may download a calendar (.ics) file. No third-party scheduling cookies are set by this website for that purpose.</p><p>The website may also use analytics technology to understand aggregate website usage and improve the service.</p><p>Where analytics are used, they are operated for the company's own website analytics purposes and are not intended to create advertising profiles or sell browsing information to third parties.</p><p>The company may use its own analytics installation to understand how visitors use the website, such as which pages are visited, so that we can maintain and improve it. The analytics service is operated by the company rather than being provided as an advertising platform to third parties. Analytics data is not sold to advertisers.</p><p>For further detail, see the <a href="#privacy">Privacy Policy</a>.</p><p>Questions can go to <a href="mailto:antonis5980@gmail.com">antonis5980@gmail.com</a>.</p>
+<p>The website uses cookies and similar technologies where necessary for its operation.</p><p>These may include cookies or locally stored information used for purposes such as:</p><ul><li>maintaining a website session</li><li>remembering language or interface preferences</li><li>remembering cookie/privacy preferences</li><li>providing required security functionality</li></ul><p>We do not use advertising cookies for third-party behavioural advertising.</p><p>The call-booking form on this website runs in your browser. Submitting a request opens your email application with a pre-filled message and may download a calendar (.ics) file. No third-party scheduling cookies are set by this website for that purpose.</p><p>The website may also use analytics technology to understand aggregate website usage and improve the service.</p><p>Where analytics are used, they are operated for the company's own website analytics purposes and are not intended to create advertising profiles or sell browsing information to third parties.</p><p>The company may use its own analytics installation to understand how visitors use the website, such as which pages are visited, so that we can maintain and improve it. The analytics service is operated by the company rather than being provided as an advertising platform to third parties. Analytics data is not sold to advertisers.</p><p>For further detail, see the <a href="#privacy">Privacy Policy</a>.</p><p>Questions can go to <a href="mailto:hybridautonomousbotsystems@gmail.com">hybridautonomousbotsystems@gmail.com</a>.</p>
       </div>
     </article>
     <article id="privacy" hidden class="privacy-policy">
       <h2 data-i18n="privacy.title">Privacy Policy</h2>
-      <div class="privacy-body" data-i18n="privacy.body" data-i18n-html="1"><p class="privacy-updated"><strong>Last updated: 4 October 2026</strong></p><p>The company ("we", "us" or "our") respects your privacy and is committed to handling personal data responsibly and transparently.</p><p><strong>The company does not generally process personal data for purposes unrelated to providing its services.</strong> Personal data may nevertheless be processed in the limited circumstances described below.</p><p>This Privacy Policy explains the limited situations in which personal information may nevertheless be processed through this website or in connection with our services, why that happens, how long it may be retained, and the rights you have under applicable data protection legislation, including the EU General Data Protection Regulation (GDPR).</p><h3>1. Who we are</h3><p>This website is operated by a sole proprietorship.</p><p><strong>Hybrid Autonomous Bot Systems</strong> is a trading name of that sole proprietorship. It does not refer to a separate legal entity. In this Privacy Policy, references to "the company" mean that sole proprietorship, including where that trading name is used.</p><p>For privacy-related enquiries, please contact us at <a href="mailto:antonis5980@gmail.com">antonis5980@gmail.com</a> or through the contact details provided on this website.</p><p>Where the company determines the purposes and means of processing personal data, the company acts as the data controller.</p><p>For certain software, automation or other services provided to customers, the company may instead process personal data on behalf of the customer. In those circumstances, the customer may be the data controller and the company may act as a data processor. Such processing is governed by the applicable service agreement and, where required, a Data Processing Agreement.</p><h3>2. Personal data we may collect</h3><p>Because the company generally does not process personal data, collection is limited. Depending on how you interact with the company, personal data may be processed only in the following limited cases:</p><h4>Information you provide directly</h4><p>For example:</p><ul><li>name</li><li>email address</li><li>telephone number, where provided</li><li>company or organisation name</li><li>information contained in enquiries, messages or call-booking requests</li><li>preferred call date and time, where you request a slot through the website</li><li>information you voluntarily provide when discussing a potential project or service.</li></ul><h4>Technical information</h4><p>When you visit the website, our systems may automatically process technical information such as:</p><ul><li>IP address</li><li>date and time of requests</li><li>pages or resources requested</li><li>browser and operating-system information</li><li>device-related information</li><li>technical and security information contained in server or application logs.</li></ul><p>This information is primarily used to operate, secure, troubleshoot and maintain the website and its services.</p><h4>Website chat</h4><p>If you use a chat facility provided on the website, the messages you submit may be stored on our application infrastructure so that we can respond to your enquiry and maintain the context of the conversation.</p><p>Please do not submit sensitive personal information through the website chat unless it is specifically necessary and requested for the service concerned.</p><h3>3. Why we use your information</h3><p>Where personal information is processed at all, we use it only for the limited purposes below:</p><ul><li>respond to enquiries and requests</li><li>communicate with prospective customers</li><li>discuss, prepare or provide services</li><li>provide customer support</li><li>maintain and secure the website and our systems</li><li>diagnose technical problems</li><li>understand general website usage and improve the website</li><li>comply with legal, accounting or other applicable obligations</li><li>establish, exercise or defend legal claims where necessary.</li></ul><p>We do not sell personal information to third parties and we do not use personal information collected through ordinary website enquiries for third-party advertising.</p><h3>4. Legal basis for processing</h3><p>Depending on the circumstances, the company processes personal data on one or more of the following legal bases under Article 6 of the GDPR:</p><h4>Performance of a contract or steps at your request</h4><p>Where processing is necessary to provide a service, respond to a request to enter into a contract, prepare a proposal, or otherwise take steps at your request before entering into a contract.</p><h4>Legal obligation</h4><p>Where processing is necessary to comply with a legal obligation, such as applicable accounting, tax or other statutory requirements.</p><h4>Legitimate interests</h4><p>Where processing is necessary for legitimate interests pursued by the company, such as:</p><ul><li>operating and securing our website and systems</li><li>preventing abuse or malicious activity</li><li>responding to business enquiries</li><li>maintaining business records</li><li>improving our services</li><li>establishing, exercising or defending legal claims.</li></ul><p>Where we rely on legitimate interests, we consider the interests and fundamental rights of the individuals concerned.</p><h4>Consent</h4><p>Where consent is required by law, we will request it before carrying out the relevant processing.</p><p>Where processing is based on consent, you may withdraw that consent at any time. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.</p><h3>5. Cookies and similar technologies</h3><p>The website uses cookies and similar technologies where necessary for its operation.</p><p>These may include cookies or locally stored information used for purposes such as:</p><ul><li>maintaining a website session</li><li>remembering language or interface preferences</li><li>remembering cookie/privacy preferences</li><li>providing required security functionality.</li></ul><p>We do not use advertising cookies for third-party behavioural advertising.</p><p>The call-booking form on this website runs in your browser. When you request a slot, your email application may open with a pre-filled message and a calendar (.ics) file may be downloaded. That flow does not set third-party scheduling cookies on this website.</p><p>The website may also use analytics technology to understand aggregate website usage and improve the service.</p><p>Where analytics are used, they are operated for the company's own website analytics purposes and are not intended to create advertising profiles or sell browsing information to third parties.</p><h3>6. Website analytics</h3><p>The company may use its own analytics installation to understand how visitors use the website.</p><p>The purpose is to obtain information about website usage, such as which pages are visited and how the website is being used, so that we can maintain and improve it.</p><p>The analytics service is operated by the company rather than being provided as an advertising platform to third parties.</p><p>Analytics data is not sold to advertisers.</p><h3>7. Server and security logs</h3><p>For operational, security and troubleshooting purposes, our infrastructure may temporarily record technical information such as IP addresses, timestamps, requested resources, browser information and security-related events.</p><p>These logs may be used to:</p><ul><li>detect and investigate malicious activity</li><li>protect the website and infrastructure</li><li>troubleshoot technical problems</li><li>maintain service reliability</li><li>establish, exercise or defend legal claims where necessary.</li></ul><p>Technical logs are retained only for as long as reasonably necessary for these purposes, taking into account security, operational and legal requirements.</p><h3>8. Who may receive personal data</h3><p>We may use trusted service providers where necessary to operate our business and website.</p><p>Depending on the service involved, these may include providers of:</p><ul><li>website and infrastructure services</li><li>network and security services</li><li>email and communications</li><li>analytics</li><li>software and technical services</li><li>backup or storage services.</li></ul><p>Such providers may process personal data only to the extent necessary to provide their services and subject to appropriate contractual, confidentiality and security arrangements.</p><p>We do not sell personal data to third parties.</p><p>We may also disclose information where required by law, by a competent authority, or where reasonably necessary to establish, exercise or defend legal claims.</p><h3>9. International transfers</h3><p>the company does not transfer personal data outside the European Economic Area (EEA).</p><p>Where personal data is processed in connection with this website or our services, that processing takes place within the EEA.</p><h3>10. How long we retain personal data</h3><p>We retain personal data only for as long as reasonably necessary for the purpose for which it was collected, unless a longer period is required or permitted by law.</p><p>As a general guide:</p><h4>Website enquiries and prospective customers</h4><p>Information relating to an enquiry or potential business relationship may normally be retained for up to <strong>24 months after the last meaningful communication</strong>, unless there is an ongoing business relationship, a legitimate reason for longer retention, or a legal requirement to retain it.</p><h4>Customer and contractual information</h4><p>Information relating to an active customer relationship is retained for the duration of the relationship and afterwards for as long as reasonably necessary for legitimate business, legal, accounting, tax or dispute-resolution purposes.</p><h4>Accounting and tax records</h4><p>Records that the company is legally required to retain are kept for the applicable statutory period.</p><h4>Website chat</h4><p>Chat messages may be retained for as long as reasonably necessary to respond to the enquiry, provide support and maintain appropriate business records. Where there is no continuing reason to retain them, they may be deleted.</p><h4>Technical and security logs</h4><p>Technical and security logs are retained only for as long as reasonably necessary for operational, security and legal purposes.</p><p>Retention periods may therefore differ depending on the nature and purpose of the information.</p><h3>11. Your rights</h3><p>Subject to the conditions and limitations provided by applicable law, you may have the right to:</p><ul><li>request access to your personal data</li><li>request correction of inaccurate or incomplete data</li><li>request deletion of your personal data</li><li>request restriction of processing</li><li>object to certain processing</li><li>request portability of personal data where the right applies</li><li>withdraw consent where processing is based on consent.</li></ul><p>You may exercise these rights by contacting the company at <a href="mailto:antonis5980@gmail.com">antonis5980@gmail.com</a> or using the contact details provided on this website.</p><p>We may need to verify your identity before fulfilling certain requests.</p><p>We will normally respond to a valid data protection request without undue delay and, in general, within one month as required by the GDPR.</p><h3>12. Right to lodge a complaint</h3><p>If you believe that your personal data has not been handled in accordance with applicable data protection law, you have the right to lodge a complaint with the relevant data protection supervisory authority.</p><p>For the company and individuals located in Greece, the competent supervisory authority is:</p><p><strong>Hellenic Data Protection Authority (HDPA)</strong></p><p>Website: <a href="https://www.dpa.gr/" target="_blank" rel="noopener noreferrer">https://www.dpa.gr/</a></p><p>You are not required to contact the company before contacting the supervisory authority, although we would welcome the opportunity to address your concern first.</p><h3>13. Security</h3><p>the company takes reasonable technical and organisational measures designed to protect personal data against unauthorised access, loss, misuse, alteration or destruction.</p><p>No internet transmission or storage system can be guaranteed to be completely secure. We therefore cannot guarantee absolute security, but we take appropriate measures based on the nature of the information and the risks involved.</p><h3>14. Personal data processed as part of the company's services</h3><p>Consistent with our general position that the company does not process personal data for its own purposes, any personal data that appears in customer systems remains under the customer's control.</p><p>When the company provides software development, automation, hosting, analytics, AI, integration or other technical services to a customer, the company may process personal data contained within the customer's systems or data only as necessary to deliver those services.</p><p>In such cases, the customer may determine the purposes and means of processing and therefore act as the data controller, while the company acts as a data processor.</p><p>The customer's instructions, the applicable service agreement and, where applicable, a Data Processing Agreement govern such processing.</p><p>the company will not use customer-provided personal data for unrelated purposes unless required or permitted by law or expressly agreed with the customer.</p><p>Where required, the company will apply appropriate technical and organisational measures and assist the customer with applicable data protection obligations.</p><h3>15. Data you should not submit through this website</h3><p>Unless specifically requested and appropriately secured for a particular service, please do not submit highly sensitive personal information through ordinary website forms or chat.</p><p>This includes information such as health information, financial account credentials, passwords, authentication secrets or other information that is not necessary for us to respond to your enquiry.</p><h3>16. Changes to this Privacy Policy</h3><p>We may update this Privacy Policy from time to time to reflect changes in our services, technology or legal obligations.</p><p>The "Last updated" date at the beginning of this page will be changed when material updates are made.</p><h3>17. Contact</h3><p>If you have questions about this Privacy Policy, our processing of personal data, or wish to exercise your data protection rights, please contact the company at <a href="mailto:antonis5980@gmail.com">antonis5980@gmail.com</a> or using the contact information provided on the website.</p></div>
+      <div class="privacy-body" data-i18n="privacy.body" data-i18n-html="1"><p class="privacy-updated"><strong>Last updated: 4 October 2026</strong></p><p>The company ("we", "us" or "our") respects your privacy and is committed to handling personal data responsibly and transparently.</p><p><strong>The company does not generally process personal data for purposes unrelated to providing its services.</strong> Personal data may nevertheless be processed in the limited circumstances described below.</p><p>This Privacy Policy explains the limited situations in which personal information may nevertheless be processed through this website or in connection with our services, why that happens, how long it may be retained, and the rights you have under applicable data protection legislation, including the EU General Data Protection Regulation (GDPR).</p><h3>1. Who we are</h3><p>This website is operated by a sole proprietorship.</p><p><strong>Hybrid Autonomous Bot Systems</strong> is a trading name of that sole proprietorship. It does not refer to a separate legal entity. In this Privacy Policy, references to "the company" mean that sole proprietorship, including where that trading name is used.</p><p>For privacy-related enquiries, please contact us at <a href="mailto:hybridautonomousbotsystems@gmail.com">hybridautonomousbotsystems@gmail.com</a> or through the contact details provided on this website.</p><p>Where the company determines the purposes and means of processing personal data, the company acts as the data controller.</p><p>For certain software, automation or other services provided to customers, the company may instead process personal data on behalf of the customer. In those circumstances, the customer may be the data controller and the company may act as a data processor. Such processing is governed by the applicable service agreement and, where required, a Data Processing Agreement.</p><h3>2. Personal data we may collect</h3><p>Because the company generally does not process personal data, collection is limited. Depending on how you interact with the company, personal data may be processed only in the following limited cases:</p><h4>Information you provide directly</h4><p>For example:</p><ul><li>name</li><li>email address</li><li>telephone number, where provided</li><li>company or organisation name</li><li>information contained in enquiries, messages or call-booking requests</li><li>preferred call date and time, where you request a slot through the website</li><li>information you voluntarily provide when discussing a potential project or service.</li></ul><h4>Technical information</h4><p>When you visit the website, our systems may automatically process technical information such as:</p><ul><li>IP address</li><li>date and time of requests</li><li>pages or resources requested</li><li>browser and operating-system information</li><li>device-related information</li><li>technical and security information contained in server or application logs.</li></ul><p>This information is primarily used to operate, secure, troubleshoot and maintain the website and its services.</p><h4>Website chat</h4><p>If you use a chat facility provided on the website, the messages you submit may be stored on our application infrastructure so that we can respond to your enquiry and maintain the context of the conversation.</p><p>Please do not submit sensitive personal information through the website chat unless it is specifically necessary and requested for the service concerned.</p><h3>3. Why we use your information</h3><p>Where personal information is processed at all, we use it only for the limited purposes below:</p><ul><li>respond to enquiries and requests</li><li>communicate with prospective customers</li><li>discuss, prepare or provide services</li><li>provide customer support</li><li>maintain and secure the website and our systems</li><li>diagnose technical problems</li><li>understand general website usage and improve the website</li><li>comply with legal, accounting or other applicable obligations</li><li>establish, exercise or defend legal claims where necessary.</li></ul><p>We do not sell personal information to third parties and we do not use personal information collected through ordinary website enquiries for third-party advertising.</p><h3>4. Legal basis for processing</h3><p>Depending on the circumstances, the company processes personal data on one or more of the following legal bases under Article 6 of the GDPR:</p><h4>Performance of a contract or steps at your request</h4><p>Where processing is necessary to provide a service, respond to a request to enter into a contract, prepare a proposal, or otherwise take steps at your request before entering into a contract.</p><h4>Legal obligation</h4><p>Where processing is necessary to comply with a legal obligation, such as applicable accounting, tax or other statutory requirements.</p><h4>Legitimate interests</h4><p>Where processing is necessary for legitimate interests pursued by the company, such as:</p><ul><li>operating and securing our website and systems</li><li>preventing abuse or malicious activity</li><li>responding to business enquiries</li><li>maintaining business records</li><li>improving our services</li><li>establishing, exercising or defending legal claims.</li></ul><p>Where we rely on legitimate interests, we consider the interests and fundamental rights of the individuals concerned.</p><h4>Consent</h4><p>Where consent is required by law, we will request it before carrying out the relevant processing.</p><p>Where processing is based on consent, you may withdraw that consent at any time. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.</p><h3>5. Cookies and similar technologies</h3><p>The website uses cookies and similar technologies where necessary for its operation.</p><p>These may include cookies or locally stored information used for purposes such as:</p><ul><li>maintaining a website session</li><li>remembering language or interface preferences</li><li>remembering cookie/privacy preferences</li><li>providing required security functionality.</li></ul><p>We do not use advertising cookies for third-party behavioural advertising.</p><p>The call-booking form on this website runs in your browser. When you request a slot, your email application may open with a pre-filled message and a calendar (.ics) file may be downloaded. That flow does not set third-party scheduling cookies on this website.</p><p>The website may also use analytics technology to understand aggregate website usage and improve the service.</p><p>Where analytics are used, they are operated for the company's own website analytics purposes and are not intended to create advertising profiles or sell browsing information to third parties.</p><h3>6. Website analytics</h3><p>The company may use its own analytics installation to understand how visitors use the website.</p><p>The purpose is to obtain information about website usage, such as which pages are visited and how the website is being used, so that we can maintain and improve it.</p><p>The analytics service is operated by the company rather than being provided as an advertising platform to third parties.</p><p>Analytics data is not sold to advertisers.</p><h3>7. Server and security logs</h3><p>For operational, security and troubleshooting purposes, our infrastructure may temporarily record technical information such as IP addresses, timestamps, requested resources, browser information and security-related events.</p><p>These logs may be used to:</p><ul><li>detect and investigate malicious activity</li><li>protect the website and infrastructure</li><li>troubleshoot technical problems</li><li>maintain service reliability</li><li>establish, exercise or defend legal claims where necessary.</li></ul><p>Technical logs are retained only for as long as reasonably necessary for these purposes, taking into account security, operational and legal requirements.</p><h3>8. Who may receive personal data</h3><p>We may use trusted service providers where necessary to operate our business and website.</p><p>Depending on the service involved, these may include providers of:</p><ul><li>website and infrastructure services</li><li>network and security services</li><li>email and communications</li><li>analytics</li><li>software and technical services</li><li>backup or storage services.</li></ul><p>Such providers may process personal data only to the extent necessary to provide their services and subject to appropriate contractual, confidentiality and security arrangements.</p><p>We do not sell personal data to third parties.</p><p>We may also disclose information where required by law, by a competent authority, or where reasonably necessary to establish, exercise or defend legal claims.</p><h3>9. International transfers</h3><p>the company does not transfer personal data outside the European Economic Area (EEA).</p><p>Where personal data is processed in connection with this website or our services, that processing takes place within the EEA.</p><h3>10. How long we retain personal data</h3><p>We retain personal data only for as long as reasonably necessary for the purpose for which it was collected, unless a longer period is required or permitted by law.</p><p>As a general guide:</p><h4>Website enquiries and prospective customers</h4><p>Information relating to an enquiry or potential business relationship may normally be retained for up to <strong>24 months after the last meaningful communication</strong>, unless there is an ongoing business relationship, a legitimate reason for longer retention, or a legal requirement to retain it.</p><h4>Customer and contractual information</h4><p>Information relating to an active customer relationship is retained for the duration of the relationship and afterwards for as long as reasonably necessary for legitimate business, legal, accounting, tax or dispute-resolution purposes.</p><h4>Accounting and tax records</h4><p>Records that the company is legally required to retain are kept for the applicable statutory period.</p><h4>Website chat</h4><p>Chat messages may be retained for as long as reasonably necessary to respond to the enquiry, provide support and maintain appropriate business records. Where there is no continuing reason to retain them, they may be deleted.</p><h4>Technical and security logs</h4><p>Technical and security logs are retained only for as long as reasonably necessary for operational, security and legal purposes.</p><p>Retention periods may therefore differ depending on the nature and purpose of the information.</p><h3>11. Your rights</h3><p>Subject to the conditions and limitations provided by applicable law, you may have the right to:</p><ul><li>request access to your personal data</li><li>request correction of inaccurate or incomplete data</li><li>request deletion of your personal data</li><li>request restriction of processing</li><li>object to certain processing</li><li>request portability of personal data where the right applies</li><li>withdraw consent where processing is based on consent.</li></ul><p>You may exercise these rights by contacting the company at <a href="mailto:hybridautonomousbotsystems@gmail.com">hybridautonomousbotsystems@gmail.com</a> or using the contact details provided on this website.</p><p>We may need to verify your identity before fulfilling certain requests.</p><p>We will normally respond to a valid data protection request without undue delay and, in general, within one month as required by the GDPR.</p><h3>12. Right to lodge a complaint</h3><p>If you believe that your personal data has not been handled in accordance with applicable data protection law, you have the right to lodge a complaint with the relevant data protection supervisory authority.</p><p>For the company and individuals located in Greece, the competent supervisory authority is:</p><p><strong>Hellenic Data Protection Authority (HDPA)</strong></p><p>Website: <a href="https://www.dpa.gr/" target="_blank" rel="noopener noreferrer">https://www.dpa.gr/</a></p><p>You are not required to contact the company before contacting the supervisory authority, although we would welcome the opportunity to address your concern first.</p><h3>13. Security</h3><p>the company takes reasonable technical and organisational measures designed to protect personal data against unauthorised access, loss, misuse, alteration or destruction.</p><p>No internet transmission or storage system can be guaranteed to be completely secure. We therefore cannot guarantee absolute security, but we take appropriate measures based on the nature of the information and the risks involved.</p><h3>14. Personal data processed as part of the company's services</h3><p>Consistent with our general position that the company does not process personal data for its own purposes, any personal data that appears in customer systems remains under the customer's control.</p><p>When the company provides software development, automation, hosting, analytics, AI, integration or other technical services to a customer, the company may process personal data contained within the customer's systems or data only as necessary to deliver those services.</p><p>In such cases, the customer may determine the purposes and means of processing and therefore act as the data controller, while the company acts as a data processor.</p><p>The customer's instructions, the applicable service agreement and, where applicable, a Data Processing Agreement govern such processing.</p><p>the company will not use customer-provided personal data for unrelated purposes unless required or permitted by law or expressly agreed with the customer.</p><p>Where required, the company will apply appropriate technical and organisational measures and assist the customer with applicable data protection obligations.</p><h3>15. Data you should not submit through this website</h3><p>Unless specifically requested and appropriately secured for a particular service, please do not submit highly sensitive personal information through ordinary website forms or chat.</p><p>This includes information such as health information, financial account credentials, passwords, authentication secrets or other information that is not necessary for us to respond to your enquiry.</p><h3>16. Changes to this Privacy Policy</h3><p>We may update this Privacy Policy from time to time to reflect changes in our services, technology or legal obligations.</p><p>The "Last updated" date at the beginning of this page will be changed when material updates are made.</p><h3>17. Contact</h3><p>If you have questions about this Privacy Policy, our processing of personal data, or wish to exercise your data protection rights, please contact the company at <a href="mailto:hybridautonomousbotsystems@gmail.com">hybridautonomousbotsystems@gmail.com</a> or using the contact information provided on the website.</p></div>
     </article>
 
         <article id="terms" hidden class="terms-policy">
       <h2 data-i18n="terms.title">Terms of Use</h2>
-      <div class="terms-body" data-i18n="terms.body" data-i18n-html="1"><p class="privacy-updated"><strong>Last updated: 4 October 2026</strong></p><p>These Terms of Use apply to this website operated by the company.</p><p>This website is operated by a sole proprietorship (ατομική επιχείρηση). <strong>Hybrid Autonomous Bot Systems</strong> is a trading name of that sole proprietorship and does not refer to a separate legal entity. In these Terms, references to "the company" mean that sole proprietorship. Legal identification details are shown in the <a href="#privacy">Privacy Policy</a>.</p><h3>1. Purpose of the website</h3><p>This website describes the services, products and examples of work offered by the company. Information on the website is provided for general information and does not by itself create a binding offer or contract.</p><h3>2. Enquiries and contracts</h3><p>Sending a contact form, call-booking request, chat message or email does not by itself create a contract. A requested call slot is not confirmed until we reply. Each engagement is defined in its own scope of work or agreement and is accepted separately.</p><h3>3. Use of the website</h3><p>You may use this website only in a lawful manner and must not attempt to disrupt, misuse or gain unauthorised access to the website or related systems.</p><h3>4. Website content</h3><p>Unless otherwise stated, content on this website is provided by the company for information about its services. You may not copy, reuse or redistribute substantial parts of the website content for commercial purposes without prior permission.</p><h3>5. External links</h3><p>Links that leave this website may lead to third-party sites. Those sites are outside the company's control and may apply their own terms and privacy practices.</p><h3>6. Privacy and cookies</h3><p>How personal data and cookies are handled is described in the <a href="#privacy">Privacy Policy</a> and the <a href="#cookies">Cookies</a> notice.</p><h3>7. Changes</h3><p>The company may update these Terms of Use from time to time. The "Last updated" date above will be changed when material updates are made.</p><h3>8. Contact</h3><p>Questions about these Terms can be sent to <a href="mailto:antonis5980@gmail.com">antonis5980@gmail.com</a>.</p></div>
+      <div class="terms-body" data-i18n="terms.body" data-i18n-html="1"><p class="privacy-updated"><strong>Last updated: 4 October 2026</strong></p><p>These Terms of Use apply to this website operated by the company.</p><p>This website is operated by a sole proprietorship (ατομική επιχείρηση). <strong>Hybrid Autonomous Bot Systems</strong> is a trading name of that sole proprietorship and does not refer to a separate legal entity. In these Terms, references to "the company" mean that sole proprietorship. Legal identification details are shown in the <a href="#privacy">Privacy Policy</a>.</p><h3>1. Purpose of the website</h3><p>This website describes the services, products and examples of work offered by the company. Information on the website is provided for general information and does not by itself create a binding offer or contract.</p><h3>2. Enquiries and contracts</h3><p>Sending a contact form, call-booking request, chat message or email does not by itself create a contract. A requested call slot is not confirmed until we reply. Each engagement is defined in its own scope of work or agreement and is accepted separately.</p><h3>3. Use of the website</h3><p>You may use this website only in a lawful manner and must not attempt to disrupt, misuse or gain unauthorised access to the website or related systems.</p><h3>4. Website content</h3><p>Unless otherwise stated, content on this website is provided by the company for information about its services. You may not copy, reuse or redistribute substantial parts of the website content for commercial purposes without prior permission.</p><h3>5. External links</h3><p>Links that leave this website may lead to third-party sites. Those sites are outside the company's control and may apply their own terms and privacy practices.</p><h3>6. Privacy and cookies</h3><p>How personal data and cookies are handled is described in the <a href="#privacy">Privacy Policy</a> and the <a href="#cookies">Cookies</a> notice.</p><h3>7. Changes</h3><p>The company may update these Terms of Use from time to time. The "Last updated" date above will be changed when material updates are made.</p><h3>8. Contact</h3><p>Questions about these Terms can be sent to <a href="mailto:hybridautonomousbotsystems@gmail.com">hybridautonomousbotsystems@gmail.com</a>.</p></div>
     </article>
   </div>
 </div>
@@ -308,8 +310,7 @@
   </div>
 </div>
 
-  <script src="particles.js"></script>
-  <script src="particles-app.js"></script>
+  <script src="nav.js"></script>
   <script src="booking.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();

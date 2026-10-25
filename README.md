@@ -52,7 +52,7 @@ Organizations that want AI **without renting their mind** from someone else’s 
 
 **antonis** — Hybrid Autonomous Bot Systems
 
-- Email: [antonis5980@gmail.com](mailto:antonis5980@gmail.com?subject=habs%20by%20antonis%20-%20Agent%20briefing)
+- Email: [hybridautonomousbotsystems@gmail.com](mailto:hybridautonomousbotsystems@gmail.com?subject=habs%20by%20antonis%20-%20Agent%20briefing)
 - LinkedIn: [habs](https://www.linkedin.com/company/habs-by-antonis)
 
 Tell me about your data perimeter, the work you want automated, and how sovereign you need to be — I’ll map a path from first Agent to a durable system.

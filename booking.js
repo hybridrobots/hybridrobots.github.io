@@ -2,7 +2,7 @@
   "use strict";
 
   var CONFIG = {
-    toEmail: "antonis5980@gmail.com",
+    toEmail: "hybridautonomousbotsystems@gmail.com",
     durationMin: 30,
     timezone: "Europe/Athens",
     daysAhead: 14,

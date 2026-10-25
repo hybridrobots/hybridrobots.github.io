@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Hybrid Autonomous Bot Systems">
+  <g fill="#E8EEF2">
+    <rect x="18" y="12" width="12" height="56" rx="3"/>
+    <rect x="50" y="12" width="12" height="56" rx="3"/>
+    <rect x="18" y="34" width="16" height="12" rx="2.5"/>
+    <rect x="46" y="34" width="16" height="12" rx="2.5"/>
+    <path d="M40 27a13 13 0 1 0 0 26a13 13 0 1 0 0-26zm0 8.5a4.5 4.5 0 1 1 0 9a4.5 4.5 0 1 1 0-9z" fill-rule="evenodd"/>
+  </g>
+</svg>
