@@ -1386,13 +1386,8 @@ body.nav-drawer-open {
     justify-content: center;
   }
 
-  .brand-name-full {
+  .brand-name {
     display: none;
-  }
-
-  .brand-name-short {
-    display: block;
-    font-size: 1rem;
   }
 
   .site-nav {
