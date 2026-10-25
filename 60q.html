@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prince2 Foundation Practice Exam</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    background: #f9fbfc;
+    color: #003366;
+    border: 1px solid #ccc;
+    padding: 30px 40px;
+    border-radius: 8px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+  #question-number {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  #question-text {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+.options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.options input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+  .options label:hover {
+    background-color: #e1efff;
+    border-color: #3399ff;
+  }
+  .options input[type="radio"]:checked + label {
+    background-color: #cce4ff;
+    border-color: #0073e6;
+  }
+  .nav-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    background-color: #0073e6;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:disabled {
+    background-color: #a6c8ff;
+    cursor: not-allowed;
+  }
+  #submit-btn {
+    margin-top: 30px;
+    width: 100%;
+  }
+  #result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    color: #3c763d;
+    border-radius: 6px;
+    font-size: 1.2em;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  #result ol {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  #result li {
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Prince2 Foundation Practice Exam</h1>
+
+<div id="question-number"></div>
+<div id="question-text"></div>
+
+<form id="options-form" class="options"></form>
+
+<div class="nav-buttons">
+  <button id="prev-btn" disabled>Previous</button>
+  <button id="next-btn">Next</button>
+</div>
+
+<button id="submit-btn" disabled>Submit Exam</button>
+
+<div id="result" style="display:none;"></div>
+
+<script>
+  const questions = [
+    {text: "What is the primary purpose of the PRINCE2 methodology?", options: ["To manage projects effectively", "To develop software", "To monitor employee performance", "To manage daily operations"], answer: 0},
+    {text: "Which PRINCE2 principle ensures that a project remains viable and worthwhile?", options: ["Manage by Exception", "Continued Business Justification", "Learn from Experience", "Focus on Products"], answer: 1},
+    {text: "Who is responsible for day-to-day management of the project?", options: ["Project Board", "Project Manager", "Team Manager", "Project Assurance"], answer: 1},
+    {text: "Which document defines the roles and responsibilities in a PRINCE2 project?", options: ["Project Brief", "Risk Register", "Organization Theme", "Quality Register"], answer: 2},
+    {text: "At what point is the Project Initiation Document created?", options: ["At the start of the project", "After project closure", "During the final stage", "When risks are identified"], answer: 0},
+
+    // Now generate 55 more sample questions by slightly rephrasing or covering key Prince2 topics:
+    {text: "Which PRINCE2 theme is concerned with the business justification?", options: ["Risk", "Business Case", "Plans", "Change"], answer: 1},
+    {text: "What is the purpose of the 'Manage by Exception' principle?", options: ["To reduce detailed reporting", "To escalate all issues", "To avoid risks", "To control every detail"], answer: 0},
+    {text: "Which role is responsible for ensuring quality assurance?", options: ["Project Manager", "Team Manager", "Project Assurance", "Senior User"], answer: 2},
+    {text: "What is the main focus of the 'Focus on Products' principle?", options: ["Emphasizing deliverables", "Completing tasks quickly", "Minimizing costs", "Reducing team size"], answer: 0},
+    {text: "What does the 'Continued Business Justification' principle require?", options: ["Project must have valid business case throughout", "Business must be involved at start only", "Business justification is optional", "Justification reviewed only at closure"], answer: 0},
+
+    {text: "Which PRINCE2 process is responsible for authorizing a project?", options: ["Directing a Project", "Starting up a Project", "Initiating a Project", "Controlling a Stage"], answer: 0},
+    {text: "Which document describes the project's products and quality criteria?", options: ["Quality Management Strategy", "Product Description", "Business Case", "Risk Register"], answer: 1},
+    {text: "What is the main output of the 'Closing a Project' process?", options: ["Project Board decision", "End Project Report", "Quality Register", "Work Packages"], answer: 1},
+    {text: "Who typically chairs the Project Board?", options: ["Project Manager", "Senior Supplier", "Executive", "Team Manager"], answer: 2},
+    {text: "What is a Work Package?", options: ["A set of related tasks assigned to a team", "A risk register", "A project plan", "A quality document"], answer: 0},
+
+    {text: "Which theme focuses on identifying and managing risks?", options: ["Change", "Risk", "Quality", "Plans"], answer: 1},
+    {text: "Which PRINCE2 role represents those who will use the project’s products?", options: ["Senior Supplier", "Executive", "Project Manager", "Senior User"], answer: 3},
+    {text: "What is the purpose of the 'Plans' theme?", options: ["To define how and when the project delivers products", "To assign tasks", "To monitor project risks", "To control changes"], answer: 0},
+    {text: "Which process monitors and controls project progress?", options: ["Managing Product Delivery", "Controlling a Stage", "Initiating a Project", "Starting up a Project"], answer: 1},
+    {text: "Which document sets out how quality will be managed?", options: ["Quality Management Strategy", "Project Initiation Document", "Risk Register", "Business Case"], answer: 0},
+
+    {text: "Who is responsible for approving stage plans?", options: ["Project Manager", "Project Board", "Team Manager", "Project Assurance"], answer: 1},
+    {text: "What is the key benefit of the 'Manage by Exception' principle?", options: ["Efficient management by setting tolerances", "Micromanagement of tasks", "Ignoring minor risks", "Delegating all decisions"], answer: 0},
+    {text: "Which PRINCE2 process deals with managing product delivery?", options: ["Managing Product Delivery", "Controlling a Stage", "Starting up a Project", "Directing a Project"], answer: 0},
+    {text: "Which theme ensures that only authorized changes are made?", options: ["Change", "Risk", "Plans", "Business Case"], answer: 0},
+    {text: "What does the 'Learn from Experience' principle promote?", options: ["Capturing lessons to improve", "Avoiding documentation", "Focusing only on current tasks", "Ignoring past mistakes"], answer: 0},
+
+    {text: "Which role has overall accountability for the project?", options: ["Executive", "Project Manager", "Senior User", "Project Assurance"], answer: 0},
+    {text: "What is the purpose of a 'Stage Plan'?", options: ["Detail work for a stage", "Describe risks", "Define project objectives", "Summarize quality criteria"], answer: 0},
+    {text: "When is a 'Checkpoint Report' typically used?", options: ["By Team Managers to report progress", "At project closure", "For risk analysis", "During project initiation"], answer: 0},
+    {text: "Which document lists all identified risks?", options: ["Risk Register", "Issue Register", "Quality Register", "Business Case"], answer: 0},
+    {text: "What is a 'Configuration Item'?", options: ["A product or document under version control", "A team member", "A risk", "A project plan"], answer: 0},
+
+    {text: "What is the role of the 'Senior Supplier'?", options: ["Represent supplier interests", "Manage daily tasks", "Authorize funding", "Approve project closure"], answer: 0},
+    {text: "Which PRINCE2 process authorizes work packages?", options: ["Managing Product Delivery", "Directing a Project", "Starting up a Project", "Closing a Project"], answer: 0},
+    {text: "What is an 'Issue' in PRINCE2?", options: ["An unplanned event requiring management", "A planned task", "A product deliverable", "A risk"], answer: 0},
+    {text: "Which role is responsible for quality assurance?", options: ["Project Assurance", "Project Manager", "Team Manager", "Project Board"], answer: 0},
+    {text: "What is the purpose of the 'Business Case' theme?", options: ["Justify the project", "Manage quality", "Handle risks", "Plan stages"], answer: 0},
+
+    {text: "What does the 'Organization' theme describe?", options: ["Project roles and responsibilities", "Quality criteria", "Risk management", "Project budget"], answer: 0},
+    {text: "When should lessons be captured and used?", options: ["Throughout the project", "Only at the end", "During initiation only", "Never"], answer: 0},
+    {text: "What is a 'Highlight Report'?", options: ["A summary report to the Project Board", "A detailed risk report", "A quality checklist", "An issue log"], answer: 0},
+    {text: "Which PRINCE2 process plans the project?", options: ["Initiating a Project", "Directing a Project", "Managing a Stage Boundary", "Closing a Project"], answer: 0},
+    {text: "Which document contains the project's risk responses?", options: ["Risk Register", "Issue Register", "Quality Register", "Business Case"], answer: 0},
+
+    {text: "What is the 'Project Product Description'?", options: ["A detailed description of the final deliverable", "A list of tasks", "A budget report", "A risk log"], answer: 0},
+    {text: "What is a 'Tolerance' in PRINCE2?", options: ["Permissible deviation from a plan", "A risk", "A project milestone", "A deliverable"], answer: 0},
+    {text: "Who is responsible for escalating issues beyond tolerances?", options: ["Project Manager", "Project Board", "Team Manager", "Senior User"], answer: 0},
+    {text: "What is the purpose of 'Controlling a Stage'?", options: ["Monitor and control the current stage", "Authorize the project", "Close the project", "Plan the next stage"], answer: 0},
+    {text: "Which document defines quality criteria?", options: ["Product Description", "Risk Register", "Issue Register", "Project Plan"], answer: 0},
+
+    {text: "What is the purpose of 'Managing a Stage Boundary'?", options: ["Plan the next stage and report", "Deliver products", "Monitor daily tasks", "Close the project"], answer: 0},
+    {text: "Who manages the quality management strategy?", options: ["Project Manager", "Project Assurance", "Senior User", "Team Manager"], answer: 0},
+    {text: "What is the primary focus of the 'Risk' theme?", options: ["Identify, assess and control risks", "Manage tasks", "Approve funding", "Deliver products"], answer: 0},
+    {text: "Which role is responsible for representing users’ interests?", options: ["Senior User", "Senior Supplier", "Project Manager", "Project Board"], answer: 0},
+    {text: "What is the purpose of an 'Exception Report'?", options: ["Notify when tolerances are exceeded", "Summarize risks", "Report quality issues", "Track project budget"], answer: 0},
+
+    {text: "Which PRINCE2 principle requires defined roles?", options: ["Defined Roles and Responsibilities", "Learn from Experience", "Manage by Exception", "Focus on Products"], answer: 0},
+    {text: "What is the first process in PRINCE2?", options: ["Starting up a Project", "Initiating a Project", "Directing a Project", "Closing a Project"], answer: 0},
+    {text: "Which document is created during 'Starting up a Project'?", options: ["Project Brief", "Business Case", "Risk Register", "Project Plan"], answer: 0},
+    {text: "What is the purpose of the 'Project Board'?", options: ["Provide overall direction and decision-making", "Manage daily work", "Control quality", "Identify risks"], answer: 0},
+    {text: "Which process is responsible for project closure?", options: ["Closing a Project", "Directing a Project", "Managing a Stage Boundary", "Initiating a Project"], answer: 0},
+
+    {text: "What is a 'Benefit' in PRINCE2?", options: ["An advantage the project delivers", "A risk factor", "A quality metric", "A project cost"], answer: 0},
+    {text: "How often should lessons learned be reviewed?", options: ["At all key stages", "Only at the end", "Not required", "Once a year"], answer: 0},
+    {text: "What is the main output of the 'Directing a Project' process?", options: ["Project Authorization", "Work Packages", "Quality Register", "Issue Reports"], answer: 0},
+    {text: "Which PRINCE2 theme addresses the response to project changes?", options: ["Change", "Risk", "Plans", "Business Case"], answer: 0},
+    {text: "What is a 'Product' in PRINCE2?", options: ["Any output that must be delivered", "A task", "A risk", "A team member"], answer: 0}
+  ];
+
+  let currentQuestion = 0;
+  const userAnswers = Array(questions.length).fill(null);
+
+  const questionNumberEl = document.getElementById('question-number');
+  const questionTextEl = document.getElementById('question-text');
+  const optionsForm = document.getElementById('options-form');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const submitBtn = document.getElementById('submit-btn');
+  const resultDiv = document.getElementById('result');
+
+  function renderQuestion() {
+    const q = questions[currentQuestion];
+    questionNumberEl.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+    questionTextEl.textContent = q.text;
+
+    optionsForm.innerHTML = '';
+
+    q.options.forEach((optionText, i) => {
+      const optionId = `option${i}`;
+      const checked = userAnswers[currentQuestion] === i ? 'checked' : '';
+const radioHTML = `
+  <label for="${optionId}">
+    <input type="radio" name="option" id="${optionId}" value="${i}" ${checked} />
+    ${optionText}
+  </label>
+`;
+      optionsForm.insertAdjacentHTML('beforeend', radioHTML);
+    });
+
+    prevBtn.disabled = currentQuestion === 0;
+    nextBtn.disabled = currentQuestion === questions.length - 1;
+    submitBtn.disabled = !userAnswers.every(ans => ans !== null);
+    resultDiv.style.display = 'none';
+  }
+
+  optionsForm.addEventListener('change', (e) => {
+    if (e.target.name === 'option') {
+      userAnswers[currentQuestion] = parseInt(e.target.value);
+      submitBtn.disabled = !userAnswers.every(ans => ans !== null);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      renderQuestion();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      renderQuestion();
+    }
+  });
+
+  submitBtn.addEventListener('click', () => {
+    let score = 0;
+    questions.forEach((q, i) => {
+      if (userAnswers[i] === q.answer) score++;
+    });
+
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = `
+      <strong>You scored ${score} out of ${questions.length}.</strong><br><br>
+      <em>Correct answers:</em>
+      <ol>
+        ${questions.map((q, i) => `
+          <li>
+            ${q.text}<br>
+            Your answer: <strong>${userAnswers[i] !== null ? q.options[userAnswers[i]] : "No answer"}</strong><br>
+            Correct answer: <strong>${q.options[q.answer]}</strong>
+          </li>
+        `).join('')}
+      </ol>
+    `;
+
+    submitBtn.disabled = true;
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+    optionsForm.querySelectorAll('input').forEach(input => input.disabled = true);
+  });
+
+  renderQuestion();
+</script>
+
+</body>
+</html>

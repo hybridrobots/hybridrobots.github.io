@@ -300,6 +300,7 @@ a:hover {
   text-transform: uppercase;
   text-decoration: none;
   border: 1px solid transparent;
+  cursor: pointer;
   transition:
     transform var(--dur) var(--ease-out),
     background var(--dur) var(--ease-out),
@@ -482,6 +483,159 @@ a:hover {
 
 .band-cta .eyebrow {
   color: var(--signal);
+}
+
+/* ── Local booking form ── */
+.book-form {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--lcars), var(--cyan)) 1;
+  max-width: 40rem;
+  scroll-margin-top: 5rem;
+}
+
+.book-form .mono-label {
+  margin-bottom: 0.45rem;
+  color: var(--signal);
+}
+
+.book-note {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-faint);
+  max-width: 36rem;
+}
+
+.book-field-label {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan-deep);
+}
+
+.book-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.book-chip {
+  appearance: none;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px 10px 4px 10px;
+  cursor: pointer;
+  transition:
+    background var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+
+.book-chip:hover {
+  border-color: var(--cyan);
+  color: var(--cyan-deep);
+  background: #fff;
+}
+
+.book-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--lcars) 0%, #f0b54a 55%, #7ec8e3 160%);
+  border-color: transparent;
+  color: #1a1205;
+}
+
+.book-chip-time {
+  min-width: 4.25rem;
+  text-align: center;
+}
+
+.book-empty {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-faint);
+}
+
+.book-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1rem;
+  margin: 0 0 1.1rem;
+}
+
+.book-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.book-field-full {
+  grid-column: 1 / -1;
+}
+
+.book-field span em {
+  font-style: normal;
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.book-field input,
+.book-field textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  transition: border-color var(--dur) var(--ease-out), background var(--dur) var(--ease-out);
+}
+
+.book-field input:focus,
+.book-field textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: #fff;
+}
+
+.book-field textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.book-status {
+  margin: 0.85rem 0 0;
+  min-height: 1.35em;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.book-status.is-ok {
+  color: var(--cyan-deep);
+}
+
+.book-status.is-err {
+  color: var(--rose);
+}
+
+@media (max-width: 640px) {
+  .book-fields {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Footer ── */
