@@ -1,5 +1,3 @@
-# habs by antonis
-
 **Hybrid Autonomous Bot Systems** — custom AI Agents you own, grounded in your knowledge, running on infrastructure you control.
 
 > AI you own. Agents you shape.
